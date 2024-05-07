@@ -60,8 +60,12 @@ fastify.register((instance, opts, done) => {
 		const files = await fs.readdir(path)
 		try {
 			for (const file of files) {
-			console.log(file)
-			allData.push(JSON.parse(await fs.readFile(path + "/" + file)))
+				console.log(file)
+				let idS = file.split(".")[0]
+				let dataS = JSON.parse(await fs.readFile(path + "/" + file))
+				let parsedFile = {id: idS, data: dataS}
+				console.log(parsedFile)
+				allData.push(parsedFile)
 			}
 	
 			return reply.status(200).send(allData)
