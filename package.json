@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@fastify/cookie": "^6.0.0",
+    "bcrypt": "^5.1.1",
+    "fastify": "^4.26.2",
+    "fastify-cookie": "^5.7.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
