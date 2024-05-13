@@ -36,10 +36,23 @@ fastify.register((instance, opts, done) => {
 */
 	
 	//Schema dati utente
+	/*
 	instance.addSchema( {
 		$id: 'userSchema',
 		body: {
 			$id: 'bodySchema',
+			type: 'object',
+			properties: {
+				id: { type: 'string' },
+				data: { type: 'object' }
+			}
+		}
+	})
+	*/
+
+	instance.addSchema({
+		$id: 'userSchema',
+		body : {	
 			type: 'object',
 			properties: {
 				id: { type: 'string' },
